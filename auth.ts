@@ -31,8 +31,6 @@ export const authOptions: AuthOptions = {
   },
   callbacks: {
     async session({ session, user }) {
-      console.log("Session created:", session);
-
       if (session?.user) {
         session.user.id = user.id;
       }

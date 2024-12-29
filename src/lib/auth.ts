@@ -1,9 +1,9 @@
 import NextAuth, { AuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import { DrizzleAdapter } from "@auth/drizzle-adapter";
-import { db } from "@/lib/db";
+import { db } from "@/src/lib/db";
 import { DefaultSession } from "next-auth";
-import { accounts, sessions, users } from "@/lib/db/schema";
+import { accounts, sessions, users } from "@/src/lib/db/schema";
 
 declare module "next-auth" {
   interface Session {
